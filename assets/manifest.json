@@ -1,0 +1,191 @@
+[
+  {
+    "original": "IMG_5461.HEIC",
+    "output": "assets/referencias-optimizadas/alfajores.webp",
+    "originalBytes": 1526410,
+    "optimizedBytes": 261900,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5467.HEIC",
+    "output": "assets/referencias-optimizadas/pan-papa-clasico-1.webp",
+    "originalBytes": 2421070,
+    "optimizedBytes": 252460,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5468.HEIC",
+    "output": "assets/referencias-optimizadas/pan-papa-clasico-2.webp",
+    "originalBytes": 1728640,
+    "optimizedBytes": 240450,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5469.HEIC",
+    "output": "assets/referencias-optimizadas/pan-papa-queso-1.webp",
+    "originalBytes": 1370684,
+    "optimizedBytes": 194770,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5470.HEIC",
+    "output": "assets/referencias-optimizadas/pan-papa-queso-2.webp",
+    "originalBytes": 2587403,
+    "optimizedBytes": 288444,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5471.HEIC",
+    "output": "assets/referencias-optimizadas/pan-papa-sesamo.webp",
+    "originalBytes": 2791166,
+    "optimizedBytes": 334044,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5473.HEIC",
+    "output": "assets/referencias-optimizadas/pan-hamburguesa-1.webp",
+    "originalBytes": 1532052,
+    "optimizedBytes": 165800,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5474.HEIC",
+    "output": "assets/referencias-optimizadas/pan-hamburguesa-2.webp",
+    "originalBytes": 2577824,
+    "optimizedBytes": 194470,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5475.HEIC",
+    "output": "assets/referencias-optimizadas/prepizza-1.webp",
+    "originalBytes": 3233366,
+    "optimizedBytes": 271818,
+    "availableForSite": false
+  },
+  {
+    "original": "IMG_5476.HEIC",
+    "output": "assets/referencias-optimizadas/prepizza-2.webp",
+    "originalBytes": 2350505,
+    "optimizedBytes": 248070,
+    "availableForSite": false
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.44 (1).jpeg",
+    "output": "public/images/gin-botanicos.webp",
+    "originalBytes": 106800,
+    "optimizedBytes": 72088,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.44 (2).jpeg",
+    "output": "public/images/gin-botanicos-duplicado.webp",
+    "originalBytes": 106800,
+    "optimizedBytes": 72088,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.44 (3).jpeg",
+    "output": "public/images/gin-clasico.webp",
+    "originalBytes": 105798,
+    "optimizedBytes": 70004,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.44 (4).jpeg",
+    "output": "public/images/gin-jardin.webp",
+    "originalBytes": 99763,
+    "optimizedBytes": 65004,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.44.jpeg",
+    "output": "public/images/lavanda.webp",
+    "originalBytes": 55898,
+    "optimizedBytes": 36856,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.45 (1).jpeg",
+    "output": "public/images/gin-tonic.webp",
+    "originalBytes": 46421,
+    "optimizedBytes": 22102,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.45 (2).jpeg",
+    "output": "public/images/brindis.webp",
+    "originalBytes": 125462,
+    "optimizedBytes": 87554,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.45.jpeg",
+    "output": "public/images/gin-romero.webp",
+    "originalBytes": 186185,
+    "optimizedBytes": 148392,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.46 (1).jpeg",
+    "output": "public/images/gin-fuego.webp",
+    "originalBytes": 99592,
+    "optimizedBytes": 53988,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.46 (2).jpeg",
+    "output": "public/images/gin-paisaje.webp",
+    "originalBytes": 67386,
+    "optimizedBytes": 35154,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.46 (3).jpeg",
+    "output": "public/images/gin-maracuya.webp",
+    "originalBytes": 125303,
+    "optimizedBytes": 80602,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.46.jpeg",
+    "output": "public/images/noche-la-elisa.webp",
+    "originalBytes": 159397,
+    "optimizedBytes": 127580,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.47.jpeg",
+    "output": "public/images/gin-frutilla.webp",
+    "originalBytes": 120863,
+    "optimizedBytes": 76264,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.43 (1).jpeg",
+    "output": "public/images/gin-mesa.webp",
+    "originalBytes": 109577,
+    "optimizedBytes": 73146,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.43 (2).jpeg",
+    "output": "public/images/gin-elaboracion.webp",
+    "originalBytes": 120311,
+    "optimizedBytes": 74124,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.43 (3).jpeg",
+    "output": "public/images/gin-noche.webp",
+    "originalBytes": 67075,
+    "optimizedBytes": 33148,
+    "availableForSite": true
+  },
+  {
+    "original": "WhatsApp Image 2026-11-06 at 19.28.43.jpeg",
+    "output": "public/images/gin-lotes.webp",
+    "originalBytes": 142643,
+    "optimizedBytes": 95178,
+    "availableForSite": true
+  }
+]

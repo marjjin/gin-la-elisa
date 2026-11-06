@@ -1,0 +1,39 @@
+{
+  "name": "gin-la-elisa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test:ui": "node scripts/verify-site.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource-variable/playfair-display": "^5.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@eslint/js": "^9.39.5",
+    "@napi-rs/canvas": "^1.1.0",
+    "@playwright/test": "^1.65.0",
+    "@rolldown/plugin-babel": "^0.3.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "heic-convert": "^2.1.0",
+    "pdfjs-dist": "^6.5.438",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.6"
+  }
+}

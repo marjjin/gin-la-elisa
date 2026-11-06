@@ -1,0 +1,87 @@
+{
+  "brindis": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-botanicos-duplicado": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-botanicos": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-clasico": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-elaboracion": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-frutilla": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-fuego": {
+    "width": 1107,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-jardin": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-lotes": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-maracuya": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-mesa": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-noche": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-paisaje": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-romero": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  },
+  "gin-tonic": {
+    "width": 588,
+    "height": 738,
+    "smallWidth": 588
+  },
+  "lavanda": {
+    "width": 590,
+    "height": 958,
+    "smallWidth": 590
+  },
+  "noche-la-elisa": {
+    "width": 960,
+    "height": 1280,
+    "smallWidth": 640
+  }
+}
