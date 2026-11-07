@@ -1,6 +1,6 @@
 import { downloadFile } from "./downloads";
 import { useState } from "react";
-import { products } from "./data";
+import { products, socialChannels } from "./data";
 import imageMetadata from "./image-metadata.json";
 
 export function Icon({ name = "arrow", className = "", ...props }) {
@@ -58,6 +58,19 @@ export function Icon({ name = "arrow", className = "", ...props }) {
         <path d="M12 5v14M5 12h14" />
       </>
     ),
+    whatsapp: (
+      <>
+        <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.8a8.5 8.5 0 1 1 16.2-4Z" />
+        <path d="m8.2 7.4 1.2-.1.9 2.2-.9 1a7.1 7.1 0 0 0 3.6 3.6l1-.9 2.2.9-.1 1.2c-.1.9-1 1.5-1.9 1.3a10.7 10.7 0 0 1-7.3-7.3c-.2-.9.4-1.8 1.3-1.9Z" />
+      </>
+    ),
+    instagram: (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      </>
+    ),
   };
   return (
     <svg
@@ -75,6 +88,53 @@ export function Icon({ name = "arrow", className = "", ...props }) {
     </svg>
   );
 }
+
+export function SocialLinks({ floating = false }) {
+  return (
+    <div
+      className={`social-links${floating ? " social-dock" : ""}`}
+      role="group"
+      aria-label="Redes y contacto de Gin La Elisa"
+    >
+      {socialChannels.map(({ id, label, href }) => {
+        const description = href ? label : `${label} · Próximamente`;
+        const content = (
+          <>
+            <Icon name={id} />
+            <span className="social-tooltip" aria-hidden="true">
+              {description}
+            </span>
+          </>
+        );
+        const className = `social-link social-link--${id}`;
+
+        return href ? (
+          <a
+            key={id}
+            className={className}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={description}
+          >
+            {content}
+          </a>
+        ) : (
+          <button
+            key={id}
+            className={className}
+            type="button"
+            aria-disabled="true"
+            aria-label={description}
+          >
+            {content}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 export function Photo({ name, alt, className = "", eager = false, ...props }) {
   const { width, height, smallWidth } = imageMetadata[name];
   return (

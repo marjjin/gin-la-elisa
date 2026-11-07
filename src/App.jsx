@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import AnimatedDialog from "./AnimatedDialog";
 import PhotoGallery from "./PhotoGallery";
-import { Brand, Icon, Photo, InquiryForm } from "./components";
+import { Brand, Icon, Photo, InquiryForm, SocialLinks } from "./components";
 import { addToCalendar } from "./downloads";
 import useScrollReveal from "./useScrollReveal";
 import useSmoothScroll from "./useSmoothScroll";
@@ -455,9 +455,8 @@ export default function App() {
               </p>
             </div>
             <p className="form-note">
-              El canal de contacto oficial se incorporará cuando esté
-              disponible. En esta muestra, el formulario permite copiar o
-              descargar la consulta.
+              Escribinos desde los íconos de WhatsApp o Instagram. También podés
+              usar el formulario para preparar, copiar o descargar tu consulta.
             </p>
           </div>
           <div className="contact-form-panel">
@@ -474,6 +473,7 @@ export default function App() {
             <br />
             <span>San Nicolás de los Arroyos, Buenos Aires.</span>
           </p>
+          <SocialLinks />
           <a className="text-link" href="#inicio">
             Volver al inicio
             <Icon name="diagonal" />
@@ -487,6 +487,8 @@ export default function App() {
           <span className="footer-demo">Sitio de muestra</span>
         </div>
       </footer>
+
+      <SocialLinks floating />
 
       <AnimatedDialog
         open={Boolean(photo)}

@@ -1,3 +1,13 @@
+// Official contact channels confirmed by the client.
+export const socialChannels = [
+  { id: "whatsapp", label: "WhatsApp", href: "https://wa.me/5493364312425" },
+  {
+    id: "instagram",
+    label: "Instagram",
+    href: "https://www.instagram.com/ginlaelisa/",
+  },
+];
+
 // Fictional locations and events requested by the client for this design preview.
 // Replace with verified information before launching the public site.
 export const products = [

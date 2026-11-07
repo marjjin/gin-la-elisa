@@ -950,6 +950,99 @@ details[open] > .details-body {
   gap: 22px;
   flex-wrap: wrap;
 }
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--cream);
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+.social-link--whatsapp {
+  color: #16734a;
+}
+.social-link--instagram {
+  color: #80416b;
+}
+.social-link[aria-disabled="true"] {
+  cursor: default;
+}
+.social-link:hover,
+.social-link:focus-visible {
+  border-color: currentColor;
+  background: #eae6ee;
+}
+.social-link[href]:hover {
+  transform: translateY(-2px);
+}
+.social-link .icon {
+  width: 23px;
+  height: 23px;
+  stroke-width: 1.6;
+}
+.social-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  right: 0;
+  width: max-content;
+  max-width: min(260px, calc(100vw - 40px));
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: left;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.social-link:hover .social-tooltip,
+.social-link:focus-visible .social-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+.social-dock {
+  position: fixed;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 15;
+  flex-direction: column;
+  gap: 6px;
+  padding: 7px;
+  border: 1px solid #ded9df;
+  border-radius: 36px;
+  background: rgb(248 246 239 / 97%);
+  box-shadow: 0 6px 28px #30244718;
+}
+.social-dock .social-link {
+  border-color: transparent;
+  background: transparent;
+}
+.social-dock .social-link:hover,
+.social-dock .social-link:focus-visible {
+  background: #eae6ee;
+}
+.social-dock .social-tooltip {
+  right: calc(100% + 18px);
+  bottom: 50%;
+  transform: translate(4px, 50%);
+}
+.social-dock .social-link:hover .social-tooltip,
+.social-dock .social-link:focus-visible .social-tooltip {
+  transform: translate(0, 50%);
+}
 .footer {
   border-top: 1px solid var(--line);
   padding-block: 35px 22px;
@@ -985,6 +1078,7 @@ details[open] > .details-body {
   gap: 20px;
   border-top: 1px solid var(--line);
   padding-top: 20px;
+  padding-right: 64px;
   font-size: 8px;
   line-height: 1.7;
   color: var(--muted);
@@ -1298,6 +1392,19 @@ body:has(dialog[open]) {
   }
 }
 @media (max-width: 600px) {
+  .social-dock {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+    gap: 4px;
+    padding: 5px;
+  }
+  .social-dock .social-link {
+    width: 44px;
+    height: 44px;
+  }
+  .footer-top > .social-links {
+    margin-right: auto;
+  }
   .section-wrap {
     width: calc(100% - 40px);
   }
@@ -1672,6 +1779,9 @@ body:has(dialog[open]) {
   }
 }
 @media print {
+  .social-dock {
+    display: none;
+  }
   .header {
     position: static;
   }

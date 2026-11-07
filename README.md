@@ -44,7 +44,9 @@ npm run preview
 
 Los eventos y las tres sucursales son **ficticios, por pedido del cliente**, y se identifican como ejemplos en la interfaz. Reemplazar los datos por información confirmada antes de un lanzamiento público.
 
-El formulario prepara una consulta para copiar o descargar. No envía datos ni simula una reserva. Cuando se disponga del WhatsApp, correo o servicio de contacto oficial, conectar ese canal. No se inventaron números ni perfiles sociales.
+El formulario prepara una consulta para copiar o descargar. No envía datos ni simula una reserva. Los íconos de contacto abren el WhatsApp oficial (+54 9 3364 31-2425) y el Instagram de la marca (@ginlaelisa), confirmados por el cliente.
+
+Los íconos SVG de WhatsApp e Instagram aparecen en una cápsula flotante y en el pie de página. Los enlaces se configuran en `socialChannels`, dentro de `src/data.js`: usar `https://wa.me/` seguido del número internacional sin signos para WhatsApp y la URL del perfil para Instagram. Mientras el enlace esté vacío, el ícono indica «Próximamente» y permanece inactivo. Los enlaces configurados abren una nueva pestaña.
 
 Las fuentes se sirven desde el proyecto. Las fotos originales de Descargas permanecen intactas.
 
