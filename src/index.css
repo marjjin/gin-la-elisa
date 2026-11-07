@@ -55,6 +55,9 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
+html.lenis {
+  scroll-behavior: auto;
+}
 body {
   margin: 0;
   min-width: 320px;

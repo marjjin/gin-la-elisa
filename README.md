@@ -1,6 +1,14 @@
 # Gin La Elisa
 
-Sitio en React + Vite con una identidad basada en el isologo y las etiquetas de la marca: violeta, lavanda, crema y verde menta. Incluye productos, historia, barra de autoservicio y barra completa, agenda con filtros, sucursales, galería y consulta para eventos.
+Sitio institucional de una sola página en React + Vite, con una identidad basada en el isologo y las etiquetas de la marca. La navegación permanece visible e indica la sección actual: nosotros, nuestro gin, barras, agenda, sucursales, galería y contacto. La información se consulta en la misma página, con detalles desplegables y un formulario de consulta integrado. Las fotografías se pueden ampliar en una ventana animada.
+
+Al elegir una sección, el menú mantiene marcado el destino durante el desplazamiento. Al llegar o interrumpirlo con rueda, teclado, táctil o arrastre, vuelve a indicar la sección visible.
+
+La galería reúne ocho fotos WebP, sin repetir las del resto de la página, en una tira horizontal con ajuste entre fotos, flechas, rango visible e indicador de posición. Se puede recorrer con el gesto táctil, trackpad o teclado; no avanza sola y respeta el movimiento reducido.
+
+El contenido aprovecha hasta 1600 px en escritorio, con fotos y títulos de escala adaptable. Los párrafos y el formulario conservan límites propios de ancho para facilitar la lectura. En tablet y celular se mantienen los márgenes y las columnas adaptadas a cada pantalla.
+
+Las secciones alternan fondos crema, lavanda y violeta de la marca. La portada ocupa todo el ancho y al menos la altura visible bajo el encabezado. Usa la foto nocturna de la botella, completa y sin estirarla, con el texto superpuesto y un degradado para facilitar la lectura. En celular el texto queda arriba y la botella debajo; la foto no se repite en la galería. Lenis suaviza la rueda y la navegación interna; conserva el desplazamiento táctil y por teclado, y se desactiva si se solicita movimiento reducido o se abre la galería.
 
 ## Desarrollo
 
@@ -20,6 +28,13 @@ npm run preview
 
 - `src/data.js`: productos, eventos y sucursales.
 - `src/App.jsx`: estructura, textos e interacciones.
+- `src/components.jsx`: marca, fotos, iconos y formulario de consulta.
+- `src/PhotoGallery.jsx`: galería horizontal, controles y navegación por teclado.
+- `src/downloads.js`: descargas de consultas y de eventos de ejemplo.
+- `src/useSectionNavigation.js`: secciones y seguimiento de la navegación.
+- `src/useScrollReveal.js`: animaciones que se repiten al bajar y subir; conserva visible el contenido enfocado y respeta el movimiento reducido.
+- `src/useSmoothScroll.js`: suavizado de rueda y enlaces internos, con preferencias de accesibilidad.
+- `src/AnimatedDialog.jsx`: apertura y cierre de la galería ampliada.
 - `src/App.css`: diseño para celular, tablet y escritorio.
 - `src/index.css`: paleta, tipografías locales y estilos base.
 - `public/images/`: fotos WebP y versiones pequeñas; isologo con transparencia.
@@ -54,6 +69,6 @@ Con el servidor local ejecutándose:
 npm run test:ui
 ```
 
-Comprueba imágenes, seis tamaños entre 320 y 1440 px, filtros y detalles de eventos, descarga de calendario, productos, consultas, selección de barra, sucursales y menú móvil. Guarda capturas en `tmp/qa/`.
+Comprueba fotos sin repeticiones, siete tamaños entre 320 y 1900 px, navegación fija, enlaces internos, productos y eventos desplegables, calendario, información de sucursales, consulta integrada, galería ampliada, menú móvil y movimiento reducido. Guarda capturas en `tmp/qa/`.
 
 Por defecto usa `http://127.0.0.1:5173` y Microsoft Edge en Windows. Para otro puerto o navegador, definir `SITE_URL` o `BROWSER_PATH`. En otros sistemas usa el Chromium de Playwright, que debe estar instalado.
