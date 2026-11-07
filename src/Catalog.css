@@ -1,22 +1,9 @@
-.catalog-nav {
-  display: flex;
-  align-items: center;
-  gap: clamp(20px, 3vw, 44px);
-  height: 100%;
-}
-.catalog-nav a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  height: 100%;
-  border-bottom: 2px solid transparent;
-  font-size: 13px;
-  color: var(--muted);
-}
-.catalog-nav a:hover,
+.catalog-nav a { gap: 6px; }
 .catalog-nav a[aria-current="page"] {
   color: var(--ink);
-  border-color: var(--purple);
+}
+.catalog-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
 }
 .catalog-nav .icon { width: 14px; height: 14px; }
 .catalog-intro { padding-block: 32px 64px; }
@@ -149,8 +136,6 @@
 }
 @media (max-width: 600px) {
   .catalog-header .header-inner { gap: 15px; }
-  .catalog-nav { gap: 16px; }
-  .catalog-nav a { font-size: 10px; }
   .catalog-nav .icon { display: none; }
   .catalog-intro { padding-block: 24px 32px; }
   .catalog-intro-layout { grid-template-columns: 1fr; gap: 26px; margin-top: 32px; }
@@ -173,8 +158,4 @@
   .catalog-dialog-copy { padding: 20px 3px 3px; }
   .catalog-dialog-copy h2 { font-size: 28px; }
   .catalog-dialog-copy .button { width: 100%; gap: 14px; padding-inline: 12px; }
-}
-@media (max-width: 360px) {
-  .catalog-nav { gap: 12px; }
-  .catalog-nav a { font-size: 9px; }
 }

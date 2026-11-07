@@ -85,6 +85,8 @@ try {
   await expect(page).toHaveURL(/\/productos\/$/);
   await expect(page.locator("#site-loader")).toHaveCount(0);
   await expect(page.locator(".catalog-product")).toHaveCount(9);
+  await page.getByRole("button", { name: "Abrir menú", exact: true }).click();
+  await page.screenshot({ path: "tmp/qa/catalog-mobile-menu.png", animations: "disabled" });
   await page.getByRole("navigation", { name: "Navegación principal" }).getByRole("link", { name: "Contacto", exact: true }).click();
   await expect(page).toHaveURL(/\/#contacto$/);
   await expect(page.locator("#site-loader")).toHaveCount(0);

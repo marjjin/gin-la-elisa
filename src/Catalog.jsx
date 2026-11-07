@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import AnimatedDialog from "./AnimatedDialog";
 import SiteFooter from "./SiteFooter";
 import { Brand, Icon, Photo, SocialLinks } from "./components";
@@ -17,6 +17,8 @@ function inquiryLink(product) {
 }
 
 export default function Catalog() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuToggle = useRef(null);
   const [category, setCategory] = useState("Todos");
   const [selected, setSelected] = useState(null);
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -34,14 +36,38 @@ export default function Catalog() {
   return (
     <>
       <a className="skip-link" href="#catalogo">Ir a los productos</a>
-      <header className="header catalog-header">
+      <header
+        className="header catalog-header"
+        onKeyDown={(event) => {
+          if (event.key === "Escape" && menuOpen) {
+            setMenuOpen(false);
+            menuToggle.current?.focus();
+          }
+        }}
+      >
         <div className="header-inner section-wrap">
           <Brand href="/#inicio" />
-          <nav className="catalog-nav" aria-label="Navegación principal">
-            <a href="/">Inicio</a>
-            <a href="/productos/" aria-current="page">Productos</a>
-            <a href="/#contacto">Contacto <Icon name="diagonal" /></a>
+          <nav
+            id="catalog-navigation"
+            className={`nav catalog-nav${menuOpen ? " is-open" : ""}`}
+            aria-label="Navegación principal"
+          >
+            <a href="/" onClick={() => setMenuOpen(false)}>Inicio</a>
+            <a href="/productos/" aria-current="page" onClick={() => setMenuOpen(false)}>Productos</a>
+            <a href="/#contacto" onClick={() => setMenuOpen(false)}>Contacto <Icon name="diagonal" /></a>
           </nav>
+          <button
+            ref={menuToggle}
+            className="menu-toggle"
+            type="button"
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={menuOpen}
+            aria-controls="catalog-navigation"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span>Menú</span>
+            <Icon name={menuOpen ? "close" : "menu"} />
+          </button>
         </div>
       </header>
 
