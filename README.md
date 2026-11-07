@@ -4,7 +4,7 @@ Sitio institucional de una sola página en React + Vite, con una identidad basad
 
 Al elegir una sección, el menú mantiene marcado el destino durante el desplazamiento. Al llegar o interrumpirlo con rueda, teclado, táctil o arrastre, vuelve a indicar la sección visible.
 
-La carga inicial muestra el isologo con una órbita lavanda, el nombre de la marca y un indicador animado sobre fondo crema. Aparece desde el HTML inicial y espera únicamente la portada y las fuentes; las demás fotos conservan la carga diferida. La transición respeta movimiento reducido, bloquea temporalmente la interacción con el contenido y libera la página tras un máximo de 5,5 segundos desde el montaje (con respaldo a los 8 segundos si falla el arranque).
+La carga inicial muestra el isologo con una órbita lavanda, el nombre de la marca y un indicador animado sobre fondo crema. Aparece desde el HTML inicial y espera únicamente la portada y las fuentes; las demás fotos conservan la carga diferida. Se mantiene al menos 1,4 segundos desde el inicio de la navegación, sin sumar esa espera a las cargas más lentas; con movimiento reducido no agrega demora. La transición bloquea temporalmente la interacción con el contenido y libera la página tras un máximo de 5,5 segundos desde el montaje (con respaldo a los 8 segundos si falla el arranque).
 
 La galería reúne ocho fotos WebP, sin repetir las del resto de la página, en una tira horizontal con ajuste entre fotos, flechas, rango visible e indicador de posición. Se puede recorrer con el gesto táctil, trackpad o teclado; no avanza sola y respeta el movimiento reducido.
 

@@ -52,7 +52,7 @@ export default function useInitialLoading() {
     ]).then(() => {
       if (cancelled) return;
       // Keep fast loads legible without adding a delay to slower connections.
-      schedule(reveal, motion.matches ? 0 : Math.max(0, 900 - performance.now()));
+      schedule(reveal, motion.matches ? 0 : Math.max(0, 1400 - performance.now()));
     });
 
     schedule(reveal, 5500);
