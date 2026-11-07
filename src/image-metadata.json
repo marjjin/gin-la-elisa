@@ -83,5 +83,55 @@
     "width": 960,
     "height": 1280,
     "smallWidth": 640
+  },
+  "alfajores": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "pan-papa-clasico-1": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "pan-papa-clasico-2": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "pan-papa-queso-1": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "pan-papa-queso-2": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "pan-papa-sesamo": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "pan-hamburguesa-1": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "pan-hamburguesa-2": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "prepizza-1": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
+  },
+  "prepizza-2": {
+    "width": 1080,
+    "height": 1440,
+    "smallWidth": 540
   }
 }

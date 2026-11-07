@@ -156,11 +156,11 @@ export function Photo({ name, alt, className = "", eager = false, ...props }) {
     />
   );
 }
-export function Brand({ footer = false }) {
+export function Brand({ footer = false, href = "#inicio" }) {
   return (
     <a
       className={`brand ${footer ? "brand-footer" : ""}`}
-      href="#inicio"
+      href={href}
       aria-label="Gin La Elisa, inicio"
     >
       <img src="/images/isologo.png" alt="" width="52" height="52" />

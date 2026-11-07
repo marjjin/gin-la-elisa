@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test:ui": "node scripts/verify-site.mjs",
-    "test:loading": "node scripts/verify-loading.mjs"
+    "test:loading": "node scripts/verify-loading.mjs",
+    "test:catalog": "node scripts/verify-catalog.mjs",
+    "prepare:catalog": "node scripts/prepare-catalog-assets.mjs"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.3.0",

@@ -114,6 +114,7 @@ export default function App() {
                 {section.label}
               </a>
             ))}
+            <a href="/productos/" className="nav-catalog">Productos</a>
           </nav>
           <button
             className="menu-toggle"
@@ -256,6 +257,16 @@ export default function App() {
                 </details>
               </article>
             ))}
+          </div>
+          <div className="catalog-entry">
+            <div>
+              <p className="eyebrow">MÁS PARA COMPARTIR</p>
+              <h3>Conocé todos los productos.</h3>
+              <p>Gin, panes de papa, prepizzas, pizzetas y alfajores, en un solo lugar.</p>
+            </div>
+            <a className="button" href="/productos/">
+              Ver todos los productos <Icon name="arrow" />
+            </a>
           </div>
         </section>
 

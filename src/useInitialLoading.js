@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function useInitialLoading() {
+export default function useInitialLoading({ imageSelector = ".intro-image img" } = {}) {
   useEffect(() => {
     const loader = document.getElementById("site-loader");
     const root = document.getElementById("root");
@@ -39,7 +39,7 @@ export default function useInitialLoading() {
 
     const images = [
       loader.querySelector("img"),
-      document.querySelector(".intro-image img"),
+      document.querySelector(imageSelector),
     ];
 
     // Wait for the first view only; below-the-fold photos remain lazy-loaded.
@@ -61,5 +61,5 @@ export default function useInitialLoading() {
       cancelled = true;
       timers.forEach(window.clearTimeout);
     };
-  }, []);
+  }, [imageSelector]);
 }

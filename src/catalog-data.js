@@ -1,0 +1,71 @@
+import { products } from "./data";
+
+export const catalogCategories = ["Todos", "Gin", "Panes", "Prepizzas", "Dulces"];
+
+export const catalogProducts = [
+  ...products.map((product) => ({
+    ...product,
+    category: "Gin",
+    images: [product.image],
+  })),
+  {
+    id: "pizzetas",
+    title: "Pizzetas",
+    category: "Prepizzas",
+    tag: "PARA ARMAR A TU GUSTO",
+    short: "Pequeñas pizzas, muchas combinaciones.",
+    description: "Pizzetas Voglia con salsa de tomate, para completar con tus ingredientes favoritos. Presentación de 12 unidades según el envase de la foto.",
+    images: ["pan-hamburguesa-1", "pan-hamburguesa-2"],
+    alt: "Paquete de pizzetas Voglia con salsa de tomate",
+  },
+  {
+    id: "pan-papa-clasico",
+    title: "Pan de papa clásico",
+    category: "Panes",
+    tag: "UN CLÁSICO PARA COMPARTIR",
+    short: "Una opción para tus sándwiches y hamburguesas.",
+    description: "Pan de papa clásico Voglia. Elegí el relleno y prepará tu próxima comida para compartir.",
+    images: ["pan-papa-clasico-1", "pan-papa-clasico-2"],
+    alt: "Panes de papa clásicos",
+  },
+  {
+    id: "pan-papa-queso",
+    title: "Pan de papa con queso",
+    category: "Panes",
+    tag: "CON UN TOQUE DE QUESO",
+    short: "Otra forma de disfrutar el pan de papa.",
+    description: "La variante de pan de papa Voglia con queso, para darle un sabor distinto a tus sándwiches y hamburguesas.",
+    images: ["pan-papa-queso-1", "pan-papa-queso-2"],
+    alt: "Panes de papa con queso",
+  },
+  {
+    id: "pan-papa-sesamo",
+    title: "Pan de papa con sésamo",
+    category: "Panes",
+    tag: "EL DETALLE ESTÁ ARRIBA",
+    short: "Pan de papa con una terminación de sésamo.",
+    description: "Pan de papa Voglia con sésamo para sumar a la mesa y combinar con tus rellenos favoritos.",
+    images: ["pan-papa-sesamo"],
+    alt: "Panes de papa con semillas de sésamo",
+  },
+  {
+    id: "prepizzas",
+    title: "Prepizzas",
+    category: "Prepizzas",
+    tag: "LA EXCUSA PARA JUNTARSE",
+    short: "Vos elegís qué ponerle arriba.",
+    description: "Prepizzas Voglia con salsa de tomate, para completar a tu gusto. Presentación de 2 unidades según el envase de la foto.",
+    images: ["prepizza-1", "prepizza-2"],
+    alt: "Prepizzas listas para completar con ingredientes",
+  },
+  {
+    id: "alfajores",
+    title: "Alfajores",
+    category: "Dulces",
+    tag: "UN MOMENTO DULCE",
+    short: "Algo rico para cerrar el encuentro.",
+    description: "Alfajorcitos de dulce de leche en las variedades Blanco, Black, Negro y De leche que aparecen en la foto. Consultá por la variedad que más te guste.",
+    images: ["alfajores"],
+    alt: "Paquetes de alfajorcitos de dulce de leche en cuatro variedades",
+  },
+];

@@ -1,6 +1,8 @@
 # Gin La Elisa
 
-Sitio institucional de una sola página en React + Vite, con una identidad basada en el isologo y las etiquetas de la marca. La navegación permanece visible e indica la sección actual: nosotros, nuestro gin, barras, agenda, sucursales, galería y contacto. La información se consulta en la misma página, con detalles desplegables y un formulario de consulta integrado. Las fotografías se pueden ampliar en una ventana animada.
+Sitio institucional en React + Vite, con una página principal y un catálogo independiente en `/productos/`. La identidad se basa en el isologo y las etiquetas de la marca. La navegación de la página principal permanece visible e indica la sección actual: nosotros, nuestro gin, barras, agenda, sucursales, galería y contacto. Incluye detalles desplegables, un formulario de consulta integrado y fotografías ampliables.
+
+La página de productos reúne los tres gins, tres variantes de pan de papa, pizzetas, prepizzas y alfajores. Ofrece filtros por categoría, fotos ampliadas (con tomas alternativas cuando están disponibles) y enlaces de WhatsApp con el producto seleccionado en el mensaje. Los precios y la disponibilidad se consultan; no se inventaron importes. Se accede desde «Productos» en el menú o desde el enlace bajo las variedades de gin. Las fotos de los envases identifican como pizzetas el material originalmente guardado con el nombre `pan-hamburguesa`.
 
 Al elegir una sección, el menú mantiene marcado el destino durante el desplazamiento. Al llegar o interrumpirlo con rueda, teclado, táctil o arrastre, vuelve a indicar la sección visible.
 
@@ -29,6 +31,9 @@ npm run preview
 ## Contenido editable
 
 - `src/data.js`: productos, eventos y sucursales.
+- `src/catalog-data.js`: los nueve productos del catálogo y sus categorías.
+- `src/Catalog.jsx` y `src/Catalog.css`: página de productos, filtros y detalles.
+- `productos/index.html` y `src/catalog-main.jsx`: entrada independiente del catálogo, con sus propios metadatos.
 - `src/App.jsx`: estructura, textos e interacciones.
 - `src/components.jsx`: marca, fotos, iconos y formulario de consulta.
 - `src/PhotoGallery.jsx`: galería horizontal, controles y navegación por teclado.
@@ -44,7 +49,7 @@ npm run preview
 - `public/images/`: fotos WebP y versiones pequeñas; isologo con transparencia.
 - `src/image-metadata.json`: dimensiones de imágenes.
 - `assets/manifest.json`: correspondencia entre originales y optimizados, con sus pesos.
-- `assets/referencias-optimizadas/`: fotos HEIC ajenas al gin convertidas a WebP y referencias de marca.
+- `assets/referencias-optimizadas/`: fuentes WebP de panes, pizzetas, prepizzas y alfajores, más referencias de marca.
 
 Los eventos y las tres sucursales son **ficticios, por pedido del cliente**, y se identifican como ejemplos en la interfaz. Reemplazar los datos por información confirmada antes de un lanzamiento público.
 
@@ -58,11 +63,14 @@ Las fuentes se sirven desde el proyecto. Las fotos originales de Descargas perma
 
 Las 27 fotos recibidas se convirtieron a WebP. Sus versiones principales pasan de 23,96 MB a 3,68 MB (aproximadamente 85 % menos). Las fotos de gin incluyen además versiones de hasta 640 px. Se recortaron los márgenes de capturas y la interfaz de redes sociales donde correspondía.
 
+El catálogo incorpora las diez fotos de alimentos con versiones adaptables, a partir de `assets/referencias-optimizadas/`. `npm run prepare:catalog` regenera los archivos públicos y sus dimensiones, y corrige la orientación de las fotos de pizzetas y prepizzas. Los originales permanecen intactos.
+
 Para repetir la importación de esta entrega, extraer primero el ZIP de WhatsApp a `tmp/assets/`, manteniendo los nombres originales. Luego:
 
 ```sh
 node scripts/inspect-material.mjs
 node scripts/prepare-assets.mjs
+npm run prepare:catalog
 ```
 
 El primer script busca los originales en la carpeta Descargas del usuario. Acepta otra carpeta como primer argumento. Estos scripts corresponden a esta entrega concreta y no son necesarios para ejecutar ni compilar la web. Los temporales quedan en `tmp/`, excluido del proyecto versionado.
@@ -74,8 +82,11 @@ Con el servidor local ejecutándose:
 ```sh
 npm run test:ui
 npm run test:loading
+npm run test:catalog
 ```
 
 Comprueba fotos sin repeticiones, siete tamaños entre 320 y 1900 px, navegación fija, enlaces internos, productos y eventos desplegables, calendario, información de sucursales, consulta integrada, galería ampliada, menú móvil y movimiento reducido. Guarda capturas en `tmp/qa/`.
+
+La prueba del catálogo verifica su acceso desde el inicio, recarga de la URL independiente, categorías, fotografías, navegación de los detalles, mensajes de WhatsApp por producto y adaptación de 320 a 1900 px. Vite genera `dist/index.html` y `dist/productos/index.html` para servir ambas páginas sin depender de reescrituras de una SPA.
 
 Por defecto usa `http://127.0.0.1:5173` y Microsoft Edge en Windows. Para otro puerto o navegador, definir `SITE_URL` o `BROWSER_PATH`. En otros sistemas usa el Chromium de Playwright, que debe estar instalado.
