@@ -16,7 +16,7 @@ try {
   await fs.mkdir("tmp/qa", { recursive: true });
   await page.goto(baseURL, { waitUntil: "networkidle" });
   await expect(page.locator("#site-loader")).toHaveCount(0);
-  await page.getByRole("navigation").getByRole("link", { name: "Productos", exact: true }).click();
+  await page.getByRole("navigation", { name: "Navegación principal" }).getByRole("link", { name: "Productos", exact: true }).click();
   await expect(page).toHaveURL(/\/productos\/$/);
   await expect(page).toHaveTitle("Productos · Gin La Elisa");
   await expect(page.locator("#site-loader")).toHaveCount(0);
@@ -85,7 +85,7 @@ try {
   await expect(page).toHaveURL(/\/productos\/$/);
   await expect(page.locator("#site-loader")).toHaveCount(0);
   await expect(page.locator(".catalog-product")).toHaveCount(9);
-  await page.getByRole("navigation").getByRole("link", { name: "Contacto", exact: true }).click();
+  await page.getByRole("navigation", { name: "Navegación principal" }).getByRole("link", { name: "Contacto", exact: true }).click();
   await expect(page).toHaveURL(/\/#contacto$/);
   await expect(page.locator("#site-loader")).toHaveCount(0);
   await expect(page.locator("#contacto h2")).toBeInViewport();

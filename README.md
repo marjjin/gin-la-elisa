@@ -36,6 +36,7 @@ npm run preview
 - `productos/index.html` y `src/catalog-main.jsx`: entrada independiente del catálogo, con sus propios metadatos.
 - `src/App.jsx`: estructura, textos e interacciones.
 - `src/components.jsx`: marca, fotos, iconos y formulario de consulta.
+- `src/SiteFooter.jsx` y `src/SiteFooter.css`: pie compartido por inicio y catálogo, con cierre de marca, navegación y contactos oficiales.
 - `src/PhotoGallery.jsx`: galería horizontal, controles y navegación por teclado.
 - `src/downloads.js`: descargas de consultas y de eventos de ejemplo.
 - `src/useSectionNavigation.js`: secciones y seguimiento de la navegación.
@@ -55,7 +56,7 @@ Los eventos y las tres sucursales son **ficticios, por pedido del cliente**, y s
 
 El formulario prepara una consulta para copiar o descargar. No envía datos ni simula una reserva. Los íconos de contacto abren el WhatsApp oficial (+54 9 3364 31-2425) y el Instagram de la marca (@ginlaelisa), confirmados por el cliente.
 
-Los íconos SVG de WhatsApp e Instagram aparecen en una cápsula flotante y en el pie de página. Los enlaces se configuran en `socialChannels`, dentro de `src/data.js`: usar `https://wa.me/` seguido del número internacional sin signos para WhatsApp y la URL del perfil para Instagram. Mientras el enlace esté vacío, el ícono indica «Próximamente» y permanece inactivo. Los enlaces configurados abren una nueva pestaña.
+Los íconos SVG de WhatsApp e Instagram aparecen en una cápsula flotante. El pie de página compartido suma un fondo ciruela con detalle botánico, una invitación al próximo encuentro, enlaces al sitio y contactos con su nombre y número o usuario. Los enlaces se configuran en `socialChannels`, dentro de `src/data.js`: usar `https://wa.me/` seguido del número internacional sin signos para WhatsApp y la URL del perfil para Instagram. Los enlaces configurados abren una nueva pestaña.
 
 Las fuentes se sirven desde el proyecto. Las fotos originales de Descargas permanecen intactas.
 

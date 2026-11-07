@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import AnimatedDialog from "./AnimatedDialog";
 import PhotoGallery from "./PhotoGallery";
+import SiteFooter from "./SiteFooter";
 import { Brand, Icon, Photo, InquiryForm, SocialLinks } from "./components";
 import { addToCalendar } from "./downloads";
 import useScrollReveal from "./useScrollReveal";
@@ -478,28 +479,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="footer section-wrap">
-        <div className="footer-top">
-          <Brand footer />
-          <p>
-            Gin artesanal.
-            <br />
-            <span>San Nicolás de los Arroyos, Buenos Aires.</span>
-          </p>
-          <SocialLinks />
-          <a className="text-link" href="#inicio">
-            Volver al inicio
-            <Icon name="diagonal" />
-          </a>
-        </div>
-        <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Gin La Elisa</span>
-          <span>
-            Beber con moderación. Prohibida su venta a menores de 18 años.
-          </span>
-          <span className="footer-demo">Sitio de muestra</span>
-        </div>
-      </footer>
+      <SiteFooter />
 
       <SocialLinks floating />
 

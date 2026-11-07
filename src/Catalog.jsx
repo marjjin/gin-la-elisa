@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AnimatedDialog from "./AnimatedDialog";
+import SiteFooter from "./SiteFooter";
 import { Brand, Icon, Photo, SocialLinks } from "./components";
 import { catalogCategories, catalogProducts } from "./catalog-data";
 import { socialChannels } from "./data";
@@ -134,18 +135,7 @@ export default function Catalog() {
         </section>
       </main>
 
-      <footer className="footer section-wrap">
-        <div className="footer-top">
-          <Brand footer href="/#inicio" />
-          <p>Un espíritu propio.<br /><span>San Nicolás de los Arroyos, Buenos Aires.</span></p>
-          <SocialLinks />
-          <a className="text-link" href="/">Volver al inicio <Icon name="arrow" /></a>
-        </div>
-        <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Gin La Elisa</span>
-          <span>Beber con moderación. Prohibida su venta a menores de 18 años.</span>
-        </div>
-      </footer>
+      <SiteFooter catalog />
       <SocialLinks floating />
 
       <AnimatedDialog
