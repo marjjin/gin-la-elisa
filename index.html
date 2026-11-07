@@ -1,8 +1,10 @@
 <!doctype html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/src/loading.css" />
+    <link rel="preload" as="image" href="/images/isologo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#63518c" />
     <meta
@@ -35,8 +37,36 @@
     <link rel="canonical" href="https://gin-la-elisa.vercel.app/" />
     <title>Gin La Elisa · El arte de compartir</title>
   </head>
-  <body>
-    <div id="root"></div>
+  <body data-loading="true">
+    <div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Cargando Gin La Elisa">
+      <div class="loader-content" aria-hidden="true">
+        <span class="loader-kicker">GIN ARTESANAL</span>
+        <div class="loader-emblem">
+          <span class="loader-orbit"></span>
+          <img src="/images/isologo.png" alt="" width="108" height="108" fetchpriority="high" />
+        </div>
+        <span class="loader-name">La Elisa<span>.</span></span>
+        <span class="loader-tagline">Un espíritu propio.</span>
+        <div class="loader-rule"><span></span></div>
+        <span class="loader-caption">Preparando un buen encuentro</span>
+      </div>
+      <span class="loader-origin" aria-hidden="true">SAN NICOLÁS DE LOS ARROYOS</span>
+    </div>
+    <div id="root" inert aria-busy="true"></div>
+    <script>
+      // Release the page even if application startup fails.
+      window.setTimeout(() => {
+        document.getElementById("site-loader")?.remove();
+        const root = document.getElementById("root");
+        root?.removeAttribute("inert");
+        root?.removeAttribute("aria-busy");
+        document.body.removeAttribute("data-loading");
+      }, 8000);
+    </script>
+    <noscript>
+      <style>#site-loader { display: none; }</style>
+      <p>Activá JavaScript para conocer Gin La Elisa.</p>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

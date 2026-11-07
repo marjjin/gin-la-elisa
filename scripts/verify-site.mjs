@@ -16,6 +16,7 @@ page.on("pageerror", (error) => errors.push(error.message));
 await fs.mkdir("tmp/qa", { recursive: true });
 try {
   await page.goto(baseURL, { waitUntil: "networkidle" });
+  await expect(page.locator("#site-loader")).toHaveCount(0);
   await page.evaluate(async () => {
     await document.fonts.ready;
     await Promise.all(

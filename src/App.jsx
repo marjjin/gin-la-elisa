@@ -4,6 +4,7 @@ import PhotoGallery from "./PhotoGallery";
 import { Brand, Icon, Photo, InquiryForm, SocialLinks } from "./components";
 import { addToCalendar } from "./downloads";
 import useScrollReveal from "./useScrollReveal";
+import useInitialLoading from "./useInitialLoading";
 import useSmoothScroll from "./useSmoothScroll";
 import useSectionNavigation, { sections } from "./useSectionNavigation";
 import { branches, events, products } from "./data";
@@ -68,6 +69,7 @@ function SectionHeading({ number, label, title, children }) {
 }
 
 export default function App() {
+  useInitialLoading();
   const [menuOpen, setMenuOpen] = useState(false);
   const [filter, setFilter] = useState("Todos");
   const [photo, setPhoto] = useState(null);

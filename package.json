@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:ui": "node scripts/verify-site.mjs"
+    "test:ui": "node scripts/verify-site.mjs",
+    "test:loading": "node scripts/verify-loading.mjs"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.3.0",

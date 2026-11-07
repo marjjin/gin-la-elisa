@@ -24,7 +24,11 @@ export default function useSmoothScroll({ onNavigateStart, onNavigateEnd } = {})
     }
 
     function sync() {
-      if (motion.matches || document.querySelector("dialog[open]")) {
+      if (
+        motion.matches ||
+        document.body.hasAttribute("data-loading") ||
+        document.querySelector("dialog[open]")
+      ) {
         stop();
       } else if (!lenis) {
         lenis = new Lenis({
@@ -140,7 +144,7 @@ export default function useSmoothScroll({ onNavigateStart, onNavigateEnd } = {})
       subtree: true,
       childList: true,
       attributes: true,
-      attributeFilter: ["open"],
+      attributeFilter: ["open", "data-loading"],
     });
     motion.addEventListener("change", sync);
     window.addEventListener("keydown", onKeyDown);
